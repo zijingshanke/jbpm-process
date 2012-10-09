@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root-container name="license" width="1128" height="460">
+  <node name="开始" x="49" y="227" width="132" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+      <bendpoint w1="0" h1="-152" w2="-263" h2="3"/>
+    </edge>
+    <edge>
+      <label x="5" y="-10"/>
+      <bendpoint w1="1" h1="120" w2="-258" h2="2"/>
+    </edge>
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+  <node name="结束" x="746" y="228" width="132" height="36"/>
+  <node name="试用期" x="251" y="344" width="159" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+      <bendpoint w1="482" h1="-1" w2="0" h2="115"/>
+    </edge>
+  </node>
+  <node name="在线提交正式授权申请" x="243" y="76" width="173" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+  <node name="线下向销售部门申请" x="246" y="226" width="176" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+  <node name="生成新的授权文件" x="513" y="76" width="132" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+  <node name="更新授权" x="517" y="228" width="132" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+</root-container>

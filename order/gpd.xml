@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<root-container name="order" width="1051" height="474">
+  <node name="开始" x="265" y="63" width="132" height="36">
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+    <edge>
+      <label x="5" y="-10"/>
+    </edge>
+  </node>
+  <node name="未支付" x="441" y="164" width="110" height="36"/>
+  <node name="已发货" x="445" y="250" width="111" height="36"/>
+  <node name="task-node1" x="0" y="0" width="132" height="36"/>
+  <node name="结束" x="263" y="346" width="132" height="36"/>
+  <node name="待颁奖-NEW" x="146" y="227" width="132" height="36"/>
+  <node name="待提名-PENDING_NOMINATE" x="688" y="251" width="195" height="36"/>
+  <node name="待审批-PENDING_APPLICATION" x="635" y="352" width="132" height="36"/>
+</root-container>

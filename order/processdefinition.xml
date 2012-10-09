@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition  xmlns="urn:jbpm.org:jpdl-3.1"  name="order">
+
+
+	<start-state name="开始">
+		<transition to="取消订单"></transition>
+		<transition to="发货"></transition>
+	</start-state>
+
+
+	<state name="未支付"></state>
+
+	<state name="已发货"></state>
+
+	<task-node name="task-node1"></task-node>
+
+	<state name="待颁奖-NEW"></state>
+
+	<state name="待提名-PENDING_NOMINATE">
+		<description>
+			PENDING_NOMINATE
+		</description>
+	</state>
+
+	<state name="待审批-PENDING_APPLICATION"></state>
+
+
+	<end-state name="结束"></end-state>
+
+
+</process-definition>

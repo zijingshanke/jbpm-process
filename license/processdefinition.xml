@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition  xmlns=""  name="license">
+
+
+	<start-state name="开始">
+		<transition to="在线提交正式授权申请"></transition>
+		<transition to="试用期"></transition>
+		<transition to="线下向销售部门申请"></transition>
+	</start-state>
+
+
+	<node name="试用期">
+		<transition to="结束" name="过期后产品将无法登录使用"></transition>
+	</node>
+
+	<node name="在线提交正式授权申请">
+		<transition to="生成新的授权文件"></transition>
+	</node>
+
+	<node name="线下向销售部门申请">
+		<transition to="生成新的授权文件"></transition>
+	</node>
+
+	<node name="生成新的授权文件">
+		<transition to="更新授权"></transition>
+	</node>
+
+	<node name="更新授权">
+		<transition to="结束"></transition>
+	</node>
+
+
+	<end-state name="结束"></end-state>
+
+
+</process-definition>

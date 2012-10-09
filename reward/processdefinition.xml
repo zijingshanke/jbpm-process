@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition  xmlns="urn:jbpm.org:jpdl-3.1"  name="order">
+
+
+	<start-state name="开始">
+		<transition to="待颁奖-NEW"></transition>
+	</start-state>
+
+
+	<state name="待颁奖-NEW">
+		<transition to="待提名-PENDING_NOMINATE"></transition>
+	</state>
+
+	<state name="待提名-PENDING_NOMINATE">
+		<description>
+			PENDING_NOMINATE
+		</description>
+		<transition to="待审批-PENDING_APPLICATION"></transition>
+		<transition to="待评选"></transition>
+	</state>
+
+	<state name="待审批-PENDING_APPLICATION">
+		<transition to="已完成-REWARDED"></transition>
+		<transition to=" 已否决-DENIED" name="to  已否决-DENIED"></transition>
+	</state>
+
+	<state name="已完成-REWARDED">
+		<transition to="结束"></transition>
+	</state>
+
+	<state name=" 已否决-DENIED">
+		<transition to="结束"></transition>
+	</state>
+
+	<state name="待评选">
+		<description>
+			等待确定获奖人
+		</description>
+		<transition to="待审批-PENDING_APPLICATION"></transition>
+	</state>
+
+	<state name="已过期">
+		<description>
+			已过期针对确定获奖人而言，如果已经确定了获奖者，颁奖者迟迟不去颁奖，这种情况下不做处理。在颁奖日期前5天通知相关人士确定获奖人，
+            如果在奖励的颁奖日期后15天还没确定则再通知1次，再过15天仍然没动静则做过期处理，并通知相关人士（Leader or HR）该奖项已经超限
+            未处理，被系统自动处理为过期
+
+		</description>
+		<transition to="结束"></transition>
+	</state>
+
+	<state name="无人获奖">
+		<description>
+			在确定获奖人时决定，如果判定确实没人符合条件，则点相关按钮转为该状态，而后该奖励冻结不能再处理
+
+		</description>
+		<transition to="结束"></transition>
+	</state>
+
+
+	<end-state name="结束"></end-state>
+
+
+</process-definition>
